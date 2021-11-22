@@ -5,45 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src = "script.js" defer></script>
 </head>
 <body>
-    <script>
-        function computerPlay(){
-            x = Math.floor(Math.random() * 3 + 1);
-            return x;
-        }
+    <button id="rock">rock</button>
+    <button id="paper">paper</button>
+    <button id="scissors">scissors</button>
+    <h3 id="result"></h3>
+    <p id="scoreDisplay"></p>
 
-        function playRound(){
-            humanIn = prompt('1 for paper \n 2 for scissors \n 3 for rock');
-            computerIn = computerPlay();
-            if (humanIn == computerIn) { 
-                return 'draw';
-            } else if (humanIn == 3 || computerIn == 3){ 
-                if (humanIn == 3) {
-                    if (computerIn == 1){
-                        return 'computer wins';
-                    } else {
-                        return 'human wins';
-                    }
-                } else if (computerIn == 3) {
-                    if (humanIn == 1){
-                        return 'human wins';
-                    } else {
-                        return 'computer wins';
-                    }   
-                }
-            } else if (humanIn > computerIn){
-                return 'human wins';
-            } else {
-                return 'computer wins'
-            }
-        }
-
-        function fullGame(){
-            for (i = 0; i < 5 ; i++){
-                playRound();
-            }
-        }
-    </script>
 </body>
 </html>
